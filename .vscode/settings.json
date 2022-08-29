@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish",
+    "appService.deploySubpath": "FarmFreshAPI/ClientApp/dist/frontend",
+    "appService.defaultWebAppToDeploy": "None"
+}

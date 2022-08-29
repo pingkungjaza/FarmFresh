@@ -1,2 +1,0 @@
-# FarmFresh
-TechnicalInterview

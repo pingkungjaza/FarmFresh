@@ -1,0 +1,36 @@
+nav {
+    position: fixed;
+    height: 100vh;
+    flex-wrap: wrap;
+    background-color: rgb(236, 240, 241);
+    font-family: 'Helvetica Neue Medium', sans-serif;
+    font-size: 21pt;
+    color: rgb(102, 102, 102);
+}
+
+ul,
+li {
+    white-space: nowrap;
+    list-style: none;
+    list-style-position: outside;
+    transition: 0.3s ease-in;
+}
+
+li:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.clicked-list {
+    background-color: #ccc;
+    color: white;
+}
+
+.subnav {
+    background-color: #ccc;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    right: auto;
+    left: 100%;
+}

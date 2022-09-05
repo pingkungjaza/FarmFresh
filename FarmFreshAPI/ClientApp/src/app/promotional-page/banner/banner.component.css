@@ -1,0 +1,25 @@
+.wrapper {
+    height: 100vh;
+}
+
+img {
+    position: fixed;
+    top: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transform: scale(1.1);
+    animation: zoomOut 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes zoomOut {
+    to {
+        object-fit: cover;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,19 @@
+header {
+    height: 11em;
+    width: 100vw;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .8) !important;
+    z-index: 1;
+}
+
+#Logo {
+    width: 100%;
+    height: 11em;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#Cart {
+    width: 12%;
+    object-fit: cover;
+    cursor: pointer;
+}

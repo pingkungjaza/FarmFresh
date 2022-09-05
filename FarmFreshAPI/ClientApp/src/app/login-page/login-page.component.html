@@ -1,0 +1,6 @@
+<div class="contain" *ngIf="!isUserAuthenticated()">
+  <app-login></app-login>
+</div>
+<div class="contain" *ngIf="isUserAuthenticated()">
+  <app-logout></app-logout>
+</div>

@@ -1,0 +1,79 @@
+<div
+  *ngIf="productService.showModal"
+  class="container-modal justify-content-center py-5 row"
+>
+  <div class="col d-flex justify-content-center">
+    <img
+      class="m-auto"
+      src="../../assets/product/{{
+        productService.product.productImage.split(',')[0]
+      }}"
+      alt="{{ productService.product.productId }}"
+    />
+  </div>
+
+  <div class="col d-flex flex-column">
+    <div class="row text-name">
+      <div class="col">{{ productService.product.productName }}</div>
+    </div>
+    <div class="row mb-4 text-packet">
+      <div class="col">{{ productService.product.productPacket }}</div>
+    </div>
+    <div class="row mb-4 text-other">
+      <div class="col-4">Key Information</div>
+      <div class="col-8">{{ productService.product.productInfo }}</div>
+    </div>
+    <div class="row mb-4 text-other">
+      <div class="col-4 d-flex flex-column">
+        About the Product
+        <button
+          *ngIf="showMore"
+          (click)="toggleShowMore()"
+          type="button"
+          class="btn-close mt-auto btn-close-red"
+        ></button>
+      </div>
+      <div class="col-8">
+        {{ productService.product.productAbout.substring(0, 90) }}
+        <span
+          *ngIf="!showMore"
+          (click)="toggleShowMore()"
+          class="text-danger"
+          id="more"
+        >
+          ...more
+        </span>
+        <span *ngIf="showMore" id="more-detail">
+          {{
+            productService.product.productAbout.substring(
+              90,
+              productService.product.productAbout.length - 1
+            )
+          }}
+        </span>
+      </div>
+    </div>
+    <div class="row mb-4 text-other">
+      <div class="col-4">Country of Origin</div>
+      <div class="col-8">{{ productService.product.productCountry }}</div>
+    </div>
+    <div class="row mt-auto box-funtion">
+      <div class="col d-flex">
+        <button class="btn btn-danger box-qty">Qty</button>
+        <select class="form-select select-qty text-center mx-2 px-2">
+          <option *ngFor="let value of getQtyList()" value="{{ value }}">
+            {{ value }}
+          </option>
+        </select>
+      </div>
+      <div class="col">
+        <button
+          (click)="productService.toggleShowModal()"
+          class="btn btn-danger w-100"
+        >
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

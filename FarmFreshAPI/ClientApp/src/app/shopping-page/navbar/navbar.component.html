@@ -1,0 +1,24 @@
+<nav>
+  <ul class="nav nav-pills flex-column py-3" role="menubar">
+    <ng-template let-menu ngFor [ngForOf]="service.menu_list">
+      <li
+        [ngClass]="{ 'clicked-list': menu.isMenuOpened }"
+        (click)="toggleMenu(menu.menuId)"
+        id="main_{{ menu.menuId }}"
+        class="nav-item px-5 py-3 relative"
+      >
+        {{ menu.name }}
+      </li>
+      <ul
+        *ngIf="menu.isMenuOpened"
+        id="sub_{{ menu.menuId }}"
+        class="nav nav-pills flex-column subnav"
+        role="menu"
+      >
+        <li *ngFor="let subMenu of menu.subMenu" class="nav-item px-5 py-3">
+          {{ subMenu }}
+        </li>
+      </ul>
+    </ng-template>
+  </ul>
+</nav>

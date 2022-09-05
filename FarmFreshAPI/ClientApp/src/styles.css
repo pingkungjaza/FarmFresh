@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgb(236, 240, 241);
+}
+
+* {
+    scroll-behavior: smooth;
+    /* font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica 25 UltraLight', sans-serif;
+    font-family: 'Helvetica 35 Thin', sans-serif;
+    font-family: 'Helvetica 45 Light', sans-serif;
+    font-family: 'Helvetica 55 Roman', sans-serif;
+    font-family: 'Helvetica 65 Medium', sans-serif; */
+}
+
+@font-face {
+    font-family: "Helvetica Neue Regular";
+    src: url(./assets/fonts/HelveticaNeueRegular.ttf);
+
+    font-family: "Helvetica Neue Medium";
+    src: url(./assets/fonts/HelveticaNeueMedium.ttf);
+
+    font-family: "Helvetica Neue Bold";
+    src: url(./assets/fonts/HelveticaNeueBold.ttf);
+}
+
+.container {
+    max-width: 94vw !important;
+}
+
+.form-control {
+    border-radius: 0.25rem !important;
+}
+
+.input-group-text {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.ngx-pagination {
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<section (click)="clickedOutsideMenu()">
+  <div class="shopping-container p-4">
+    <div class="row justify-content-center">
+      <div
+        *ngFor="
+          let product of productService.product_list
+            | paginate
+              : {
+                  itemsPerPage: 3,
+                  currentPage: page,
+                  totalItems: total
+                }
+            | filter: searchService.filterTerm
+        "
+        (click)="productService.toggleShowModal(product.productId)"
+        class="col d-flex flex-column justify-content-center item-container mb-4 mx-4 px-0"
+      >
+        <img
+          src="../../assets/product/{{ product.productImage.split(',')[0] }}"
+          alt="{{ product.productId }}"
+        />
+        <div class="item-name-container">
+          <strong>{{ product.productName }}</strong>
+          <br />
+          <span>{{ product.productSubName }}</span>
+        </div>
+      </div>
+      <pagination-controls
+        (pageChange)="pageChangeEvent($event)"
+      ></pagination-controls>
+    </div>
+    <div class="justify-content-center modal-detail">
+      <app-modal-product-detail></app-modal-product-detail>
+    </div>
+  </div>
+</section>

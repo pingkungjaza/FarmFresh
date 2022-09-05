@@ -1,0 +1,48 @@
+section {
+    background-color: rgb(236, 240, 241);
+}
+
+.shopping-container {
+    margin-left: var(--navWidth);
+    display: flex;
+    justify-content: center;
+}
+
+.item-container {
+    align-items: center;
+    cursor: pointer;
+    max-width: 20vw;
+}
+
+img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 2.5em;
+    object-fit: cover;
+}
+
+img:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.item-name-container {
+    align-self: flex-start;
+}
+
+strong {
+    font-family: 'Helvetica Neue Bold', sans-serif;
+    font-size: 21pt;
+    color: rgb(102, 102, 102);
+}
+
+span {
+    font-family: 'Helvetica Neue Bold', sans-serif;
+    font-size: 21pt;
+    color: rgb(75, 75, 75);
+}
+
+.modal-detail {
+    position: fixed;
+    align-items: center;
+    padding: inherit;
+}

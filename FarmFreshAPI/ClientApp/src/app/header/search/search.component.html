@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center h-100 px-4">
+  <div class="input-group">
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Search for a product or brand"
+      [(ngModel)]="searchService.filterTerm"
+      (keyup.enter)="onEnter()"
+    />
+    <span class="input-group-text" routerLink="/shopping">
+      <i class="fa-solid fa-magnifying-glass text-white text-lg m-auto"></i>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+input {
+    font-family: 'Helvetica Neue Regular', sans-serif;
+    font-size: 18pt;
+    color: rgb(82, 100, 100);
+    padding: 1rem;
+}
+
+input::placeholder {
+    color: rgb(82, 100, 100);
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    z-index: 1;
+    width: 4.5em;
+    height: 4.5em;
+    background: rgb(46, 117, 180);
+    cursor: pointer;
+}
+
+i {
+    font-size: xx-large;
+}

@@ -1,4 +1,7 @@
 # FarmFresh
+Login
+Username: admin
+Password: password
 
 ------------------------------------------------------------
 
